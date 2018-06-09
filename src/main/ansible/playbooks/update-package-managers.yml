@@ -1,0 +1,8 @@
+
+System Administration via Ansible
+
+	Update Package Managers - apt
+
+		Remove old packages
+		apt install --autoremove
+
