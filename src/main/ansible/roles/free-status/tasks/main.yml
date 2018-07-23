@@ -1,4 +1,2 @@
 
-
-- name: Ensure the kio-extras dependency is available.
-  echo: "hi"
+- shell: free -m
