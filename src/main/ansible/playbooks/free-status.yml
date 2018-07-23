@@ -1,6 +1,6 @@
 
 
-# hosts: raspberry-pis
+- hosts: all
 - remote_user: pi
   serial: 1
   become: true
