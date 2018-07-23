@@ -1,0 +1,5 @@
+
+		Remove old packages
+		apt install --autoremove
+
+
