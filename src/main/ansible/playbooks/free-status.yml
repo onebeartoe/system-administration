@@ -1,8 +1,8 @@
 
 
-- hosts: raspberry-pis
-  remote_user: pi
+# hosts: raspberry-pis
+- remote_user: pi
   serial: 1
   become: true
   roles:
-    - ../roles/dolphin-with-preview-pane
+    - ../roles/free-status
