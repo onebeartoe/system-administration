@@ -29,6 +29,7 @@ pipeline
 
                     ls -ltrh
 
+# This script/Ansible expects to work with Python 2.7.12
                     # -i is the path inventory file; -l is the limit for the groups in the inventory file
                     ansible-playbook playbooks/update-package-managers.yml -i ansible-betoland.inventory -l laserengraver1
 #backup              ansible-playbook start-neje-engrave.yml -i ansible-betoland.inventory -l laserengraver1
