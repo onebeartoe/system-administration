@@ -21,11 +21,11 @@ pipeline
 
                     ls -ltrh
 
-#                    cd neje-engrave/src/main/ansible
+                    cd src/main/ansible/
 
 #                    cp ${ansible_inventory_path} .
 
-#                    ls -ltrh
+                    ls -ltrh
 
 #                    ansible-playbook start-neje-engrave.yml -i ansible-betoland.inventory -l laserengraver1
                 '''
