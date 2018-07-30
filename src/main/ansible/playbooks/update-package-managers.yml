@@ -1,5 +1,4 @@
 
-System Administration via Ansible
-
-	Update Package Managers - apt
-
+- name: Run the equivalent of "apt update".
+  apt:
+    update_cache: yes

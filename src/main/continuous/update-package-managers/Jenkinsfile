@@ -17,6 +17,8 @@ pipeline
                 echo 'Updating package managers...'
 
                 sh '''
+                    ansible-playbook --version
+
                     pwd
 
                     ls -ltrh
@@ -27,7 +29,9 @@ pipeline
 
                     ls -ltrh
 
-#                    ansible-playbook start-neje-engrave.yml -i ansible-betoland.inventory -l laserengraver1
+                    # -i is the path inventory file; -l is the limit for the groups in the inventory file
+                    ansible-playbook playbooks/update-package-managers.yml -i ansible-betoland.inventory -l laserengraver1
+#backup              ansible-playbook start-neje-engrave.yml -i ansible-betoland.inventory -l laserengraver1
                 '''
             }
         }
