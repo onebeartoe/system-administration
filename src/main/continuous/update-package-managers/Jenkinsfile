@@ -23,7 +23,7 @@ pipeline
 
                     cd src/main/ansible/
 
-#                    cp ${ansible_inventory_path} .
+                    cp ${ansible_inventory_path} .
 
                     ls -ltrh
 
