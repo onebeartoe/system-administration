@@ -1,0 +1,8 @@
+
+#- name: Update the package manager.s
+#  shell: apt-get update
+
+# Not sure why this didnt work
+- name: Run the equivalent of "apt update".
+  apt:
+    update_cache: yes
