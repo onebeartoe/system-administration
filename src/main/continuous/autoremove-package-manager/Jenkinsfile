@@ -1,0 +1,39 @@
+
+
+pipeline 
+{
+    agent
+    {
+        label 'master'
+    }
+
+    stages 
+    {
+        stage('Update Package Managers')
+        {
+            steps
+            {
+                
+                echo 'Updating package managers...'
+
+                sh '''
+                    ansible-playbook --version
+
+                    pwd
+
+                    ls -ltrh
+
+                    cd src/main/ansible/
+
+                    cp ${ansible_inventory_path} .
+
+                    ls -ltrh
+
+                    # This script/Ansible expects to work with Python 2.7.12
+                    # -i is the path inventory file; -l is the limit for the groups in the inventory file
+                    ansible-playbook playbooks/autoremove-package-manager.yml -i ansible-betoland.inventory -l all
+                '''
+            }
+        }
+    }
+}
