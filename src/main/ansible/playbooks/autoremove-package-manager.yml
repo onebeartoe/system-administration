@@ -1,5 +1,11 @@
 
-		Remove old packages
-		apt install --autoremove
+#		Remove old packages
+#		apt install --autoremove
 
 
+- hosts: all
+#  remote_user: pi
+  serial: 1
+  become: true
+  roles:
+    - ../roles/autoremove-package-manager
