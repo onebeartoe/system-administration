@@ -1,0 +1,4 @@
+
+- name: Run the equivalent of "apt upgrade".
+  apt:
+    upgrade: yes

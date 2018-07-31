@@ -1,0 +1,6 @@
+
+- hosts: all
+  serial: 1
+  become: true
+  roles:
+    - ../roles/upgrade-package-manager
