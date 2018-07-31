@@ -4,7 +4,7 @@
 
 
 - hosts: all
-#  remote_user: pi
+  remote_user: pi
   serial: 1
   become: true
   roles:
