@@ -4,4 +4,4 @@
   serial: 1
   become: true
   roles:
-    - ../roles/update-package-managers
+    - ../roles/update-package-manager
