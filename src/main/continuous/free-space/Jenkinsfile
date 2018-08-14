@@ -8,12 +8,12 @@ pipeline
 
     stages 
     {
-        stage('Package Manager - Upgrade')
+        stage('Show Freespace')
         {
             steps
             {
                 
-                echo 'Upgrading packages...'
+                echo 'Show Freespace...'
 
                 sh '''
                     ansible-playbook --version
@@ -28,11 +28,10 @@ pipeline
 
                     ls -ltrh
 
-                    # This script/Ansible expects to work with Python 2.7.12
-                    # -i is the path inventory file; -l is the limit for the groups in the inventory file
-                    ansible-playbook playbooks/upgrade-package-managers.yml -i ansible-betoland.inventory -l all
+                    ansible-playbook playbooks/free-status.yml -i ansible-betoland.inventory -l all -v
                 '''
             }
         }
     }
 }
+
