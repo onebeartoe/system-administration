@@ -1,0 +1,35 @@
+
+pipeline 
+{
+    agent
+    {
+        label 'master'
+    }
+
+    stages 
+    {
+        stage('Show notifiaton intall')
+        {
+            steps
+            {                
+                echo 'Show email notifiaton intall...'
+
+                sh '''
+                    ansible-playbook --version
+
+                    pwd
+
+                    ls -ltrh
+
+                    cd src/main/ansible/
+
+                    cp ${ansible_inventory_path} .
+
+                    ls -ltrh
+
+                    ansible-playbook playbooks/octoprint/email-notifications/install.yml -i ansible-betoland.inventory -l ploop -v
+                '''
+            }
+        }
+    }
+}
