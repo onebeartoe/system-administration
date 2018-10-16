@@ -4,4 +4,4 @@
   serial: 1
   become: true
   roles:
-    - ../roles/octoprint/email-notifications/ssss
+    - ../roles/octoprint/email-notifications
