@@ -27,7 +27,7 @@ pipeline
 
                     ls -ltrh
 
-                    ansible-playbook playbooks/octoprint/email-notifications/install.yml -i ansible-betoland.inventory -l ploop -v
+                    ansible-playbook playbooks/octoprint/email-notifications/install.yml -i ansible-betoland.inventory -l ${hostLimit} -v
                 '''
             }
         }
