@@ -1,0 +1,23 @@
+events:
+  enabled: true
+  subscriptions:
+  - command:
+    - logger 'PrintDone - {name}'
+    - curl -o /tmp/printDone.jpg "http://localhost:8080/?action=snapshot"
+    - /usr/bin/java -jar /opt/onebeartoe/email-sendette.jar --to onebeartoe@gmail.com
+      --subject "Duplicator - PrintDone - {name}" --attachment /tmp/printDone.jpg
+      --smtpUser duplicator-pi --forceSmtpPassword {smtpPassword} >> /home/pi/workspace/octoprint-command.logs
+      2>&1
+    debug: true
+    event: PrintDone
+    type: system
+  - command:
+    - logger 'PrintStarted - {name}'
+    - ls -la /usr/bin/java
+    - /usr/bin/java -jar /opt/onebeartoe/email-sendette.jar --to onebeartoe@gmail.com
+      --subject "Duplicator - PrintStarted - {name}" --smtpUser duplicator-pi --forceSmtpPassword
+      {smtpPassword} >> /home/pi/workspace/octoprint-command.logs 2>&1
+    debug: true
+    event: PrintStarted
+    type: system
+
