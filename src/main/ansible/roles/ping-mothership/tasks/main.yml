@@ -1,5 +1,5 @@
 
-- name: Setup the environment variable for the mothership ping URL.
+- name: SetupAdd an environment variable crontab entry to call the script.
 - cron:
     name: MOTHERSHIP_PING_URL
     env: yes
