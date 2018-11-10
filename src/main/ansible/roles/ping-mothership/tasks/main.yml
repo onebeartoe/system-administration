@@ -3,6 +3,7 @@
   copy:
     src: ping-mothership.sh
     dest: /opt/onebeartoe/
+    mode: u+rwx
     
 - name: test the sript.
   shell: /opt/onebeartoe/ping-mothership.sh
