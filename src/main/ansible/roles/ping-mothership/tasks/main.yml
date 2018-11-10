@@ -1,0 +1,8 @@
+
+- name: Copy the BASH script that pings the mothership.
+  copy:
+    src: ping-mothership.sh
+    dest: /opt/onebeartoe/
+    
+- name: test the sript.
+  shell: /opt/onebeartoe/ping-mothership.sh

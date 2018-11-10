@@ -1,0 +1,27 @@
+
+pipeline 
+{
+    agent
+    {
+        label 'master'
+    }
+
+    stages 
+    {
+        stage('Ping Mothership')
+        {
+            steps
+            {
+                echo 'pingo'
+
+                sh '''
+                    cd src/main/ansible/
+
+                    cp ${ansible_inventory_path} .
+
+                    ansible-playbook playbooks/ping-mothership.yml -i ansible-betoland.inventory -l cr-10s-octoprint
+                '''
+            }
+        }
+    ]
+}

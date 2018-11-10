@@ -2,7 +2,6 @@
 #		Remove old packages
 #		apt install --autoremove
 
-
 - hosts: all
   remote_user: pi
   serial: 1
