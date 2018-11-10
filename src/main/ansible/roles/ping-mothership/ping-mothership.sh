@@ -1,2 +1,2 @@
 
-ifconfig
+wget $MOTHERSHIP_PING_URL
