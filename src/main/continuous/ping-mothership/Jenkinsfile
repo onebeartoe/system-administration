@@ -19,7 +19,7 @@ pipeline
 
                     cp ${ansible_inventory_path} .
 
-                    ansible-playbook playbooks/ping-mothership.yml -i ansible-betoland.inventory -l cr-10s-octoprint
+                    ansible-playbook playbooks/ping-mothership.yml -i ansible-betoland.inventory -l cr-10s-octoprint,darth-vader
                 '''
             }
         }
