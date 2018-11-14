@@ -8,11 +8,11 @@ pipeline
 
     stages 
     {
-        stage('Update Package Managers')
+        stage('Octoprint Email Notifications - apt Dependencies')
         {
             steps
-            {
-                echo 'Updating package managers...'
+            {                
+                echo 'Show email notifiaton intall...'
 
                 sh '''
                     ansible-playbook --version
@@ -27,9 +27,7 @@ pipeline
 
                     ls -ltrh
 
-                    # This script/Ansible expects to work with Python 2.7.12
-                    # -i is the path inventory file; -l is the limit for the groups in the inventory file
-                    ansible-playbook playbooks/update-package-managers.yml -i ansible-betoland.inventory -l all
+                    ansible-playbook playbooks/octoprint/email-notifications/apt-dependencies.yml -i ansible-betoland.inventory -l ${hostLimit} -v
                 '''
             }
         }

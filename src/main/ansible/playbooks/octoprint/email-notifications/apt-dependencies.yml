@@ -4,4 +4,4 @@
   serial: 1
   become: true
   roles:
-    - ../../../roles/octoprint/email-notifications/install
+    - ../../../roles/apt/java/openjdk-8
