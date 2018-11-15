@@ -4,7 +4,8 @@ import java.io.FileOutputStream;
 import java.nio.file.Files;
 import java.nio.file.StandardOpenOption;
 import java.nio.file.Path;
-    
+import java.nio.file.Paths;
+
 evaluate( new File("ConfigurationPaths.groovy") )
 
 def configFilePath = "~/.octoprint/config.yml";
@@ -12,7 +13,7 @@ def configFilePath = "~/.octoprint/config.yml";
 def backupFilePath = "~/.octoprint/config.yml.backup"
 
 // Does the Events configuration already exists?
-def configContents = Files.readAllBytes( Path.get(configFilePath) );
+def configContents = Files.readAllBytes( Paths.get(configFilePath) );
 
 def configExists = configContents.contains("events:") && configContents.contains("subscriptions:");
 
@@ -31,7 +32,7 @@ else
     else
     {
         // backup the configuration file in case a revert is needed
-        def source = Path.get(configFilePath);
+        def source = Paths.get(configFilePath);
         
         def outstream = FileOutputStream(backupFile);
         
@@ -39,7 +40,7 @@ else
     }
     
     // append the 'events:' block to the configuration file
-    def outpath = Path.get(configFilePath);
+    def outpath = Paths.get(configFilePath);
     def text = Files.readAllBytes("config.xml.events")
     Files.write(outpath, text, StandardOpenOption.APPEND)
 }
