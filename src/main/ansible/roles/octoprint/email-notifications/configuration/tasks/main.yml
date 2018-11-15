@@ -15,7 +15,7 @@
     dest: /opt/onebeartoe/octoprint/
     mode: a+rwx
 
-#- shell: JAVA_HOME=/usr groovy /opt/onebeartoe/octoprint/Configuration.groovy
+- shell: JAVA_HOME=/usr groovy /opt/onebeartoe/octoprint/Configuration.groovy
 
 #---------------------------------------
 
