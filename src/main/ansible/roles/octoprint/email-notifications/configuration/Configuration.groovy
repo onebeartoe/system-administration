@@ -8,9 +8,9 @@ import java.nio.file.Paths;
 
 evaluate( new File("ConfigurationPaths.groovy") )
 
-def configFilePath = "~/.octoprint/config.yml";
+def configFilePath = "/home/pi/.octoprint/config.yml";
 
-def backupFilePath = "~/.octoprint/config.yml.backup"
+def backupFilePath = "/home/pi/.octoprint/config.yml.backup"
 
 // Does the Events configuration already exists?
 def configContents = Files.readAllBytes( Paths.get(configFilePath) );
