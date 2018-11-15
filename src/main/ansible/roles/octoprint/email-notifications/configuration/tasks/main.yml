@@ -3,6 +3,8 @@
     pwd
     echo $HOSTNAME
 
-- shell: ls -latrh .octoprint
-
 - shell: JAVA_HOME=/usr groovy -version 
+
+- shell: |
+    JAVA_HOME=/usr
+    groovy roles/octoprint/email-notifications/configuration/Configuration.groovy
