@@ -3,7 +3,10 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.nio.file.Files;
 
-evaluate( new File("../../configuration/ConfigurationPaths.groovy") )
+def pwd = new File(".")
+println "pwd: " + pwd.getAbsolutePath();
+
+evaluate( new File("ConfigurationPaths.groovy") )
 
 def backupFile = new File(backupFilePath)
 
