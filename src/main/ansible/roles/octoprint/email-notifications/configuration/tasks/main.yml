@@ -6,5 +6,5 @@
 - shell: JAVA_HOME=/usr groovy -version 
 
 - shell: |
-    JAVA_HOME=/usr
+    export JAVA_HOME=/usr 
     groovy roles/octoprint/email-notifications/configuration/Configuration.groovy
