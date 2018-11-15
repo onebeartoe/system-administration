@@ -14,6 +14,12 @@
     src: Configuration.groovy
     dest: /opt/onebeartoe/octoprint/
     mode: a+rwx
+    
+- name: Copy the Groovy PATHS script.
+  copy:
+    src: ConfigurationPaths.groovy
+    dest: /opt/onebeartoe/octoprint/
+    mode: a+rwx
 
 - shell: JAVA_HOME=/usr groovy /opt/onebeartoe/octoprint/Configuration.groovy
 

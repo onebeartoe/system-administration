@@ -3,8 +3,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.nio.file.Files;
 
-def configFilePath = "~/.octoprint/config.yml"
-def backupFilePath = "~/.octoprint/config.yml.backup"
+evaluate( new File("../../configuration/ConfigurationPaths.groovy") )
 
 def backupFile = new File(backupFilePath)
 

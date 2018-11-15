@@ -1,6 +1,8 @@
 
 import java.io.File;
 
+evaluate( new File("ConfigurationPaths.groovy") )
+
 def filePath = "~/.octoprint/config.yml"
 
 def file = new File(filePath)
