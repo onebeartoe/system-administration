@@ -1,6 +1,8 @@
 
+- name: Copy the Groovy script.
+  copy:
+    src: RevertConfiguration.groovy
+    dest: /opt/onebeartoe/octoprint/
+    mode: a+rwx
 
-
-use a script or shell
-
-
+- shell: JAVA_HOME=/usr groovy /opt/onebeartoe/octoprint/RevertConfiguration.groovy
