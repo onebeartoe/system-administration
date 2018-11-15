@@ -2,4 +2,4 @@
 - name: OpenJDK 8 is present
   apt:
     name: openjdk-8-jdk
-    force: yes
+#    force: yes

@@ -4,4 +4,5 @@
   serial: 1
   become: true
   roles:
+    - ../../../roles/apt/groovy/default
     - ../../../roles/apt/java/openjdk-8
