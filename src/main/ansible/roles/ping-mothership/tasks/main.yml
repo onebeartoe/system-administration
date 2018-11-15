@@ -11,12 +11,8 @@
     dest: /opt/onebeartoe/
     mode: u+rwx
 
-#- name: test the sript.
-#  shell: /opt/onebeartoe/ping-mothership.sh
-
 #- name: Add a crontab entry to call the script.
 - cron:
     name: "ping-mothership"
     minute: "*/2"
     job: "/opt/onebeartoe/ping-mothership.sh"
-    
