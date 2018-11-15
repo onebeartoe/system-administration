@@ -5,7 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.StandardOpenOption;
 import java.nio.file.Path;
     
-evaluate( new File("ConfigurationPaths.groovyyyy") )
+evaluate( new File("ConfigurationPaths.groovy") )
 
 // Does the Events configuration already exists?
 def configContents = Files.readAllBytes( Path.get(configFilePath) );
