@@ -2,7 +2,7 @@
 - hosts: all
   remote_user: pi
   serial: 1
-#  become: true
+  become: true
   roles:
     - ../../../roles/octoprint/email-notifications/configuration
 
