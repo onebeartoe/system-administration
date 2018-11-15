@@ -5,15 +5,19 @@
 
 #- shell: JAVA_HOME=/usr groovy -version 
 
-#- shell: JAVA_HOME=/usr groovy Configuration.groovy
+- shell: JAVA_HOME=/usr groovy Configuration.groovy
 
-- name: Copy the Groovy script.
-  copy:
-    src: Configuration.groovy
-    dest: /opt/onebeartoe/octoprint/
-    mode: a+rwx
+#---------------------------------------
 
-- shell: JAVA_HOME=/usr groovy /opt/onebeartoe/octoprint/Configuration.groovy
+#- name: Copy the Groovy script.
+#  copy:
+#    src: Configuration.groovy
+#    dest: /opt/onebeartoe/octoprint/
+#    mode: a+rwx
+
+#- shell: JAVA_HOME=/usr groovy /opt/onebeartoe/octoprint/Configuration.groovy
+
+#---------------------------------------
 
 #- script: Configuration.sh
 #- script: roles/octoprint/email-notifications/configuration/Configuration.sh
