@@ -1,24 +1,33 @@
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.nio.file.Files;
 
-def filePath = "~/.octoprint/config.yml"
+def configFilePath = "~/.octoprint/config.yml"
+def backupFilePath = "~/.octoprint/config.yml.backup"
 
-def file = new File(filePath)
+def backupFile = new File(backupFilePath)
 
-if( file.exists() )
+if( backupFile.exists() )
 {
-    println "file found"
+    println "backupFile found"
+    
+    if( backupFile.canRead() )
+    {
+        println "the backupFile is readable"
+        
+        def source = backupFile.toPath();
+
+        def outstream = new FileOutputStream(configFilePath);
+
+        Files.copy(soure, outstream);        
+    }
+    else
+    {
+        println "backupFile CANNOT be read, not gonna read it"
+    }    
 }
 else
 {
-    println "file NOT found - not gonna do it"
-}
-
-if( file.canRead() )
-{
-    println "the file is readable"
-}
-else
-{
-    println "file CANNOT be read, not gonna read it"
+    println "backupFile NOT found - not gonna do it"
 }
