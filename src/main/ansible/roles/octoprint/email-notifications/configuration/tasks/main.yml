@@ -11,7 +11,7 @@
 
 - name: Copy the Groovy script.
   copy:
-    src: Configuration.groovyyyyy
+    src: Configuration.groovy
     dest: /opt/onebeartoe/octoprint/
     mode: a+rwx
 
