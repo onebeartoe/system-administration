@@ -41,6 +41,8 @@ else
     
     // append the 'events:' block to the configuration file
     def outpath = Paths.get(configFilePath);
-    def text = Files.readAllBytes("config.xml.events")
+    
+    def text = Files.readAllBytes( Paths.get("config.xml.events") )
+    
     Files.write(outpath, text, StandardOpenOption.APPEND)
 }
