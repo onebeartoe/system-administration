@@ -1,1 +1,31 @@
 
+pipeline 
+{
+    agent
+    {
+        label 'master'
+    }
+
+    stages 
+    {
+        stage('Octoprint Email Notifications - Configuration')
+        {
+            steps
+            {                
+                echo 'email notifications - configuration...'
+
+                sh '''
+                    pwd
+
+                    cd src/main/ansible/
+
+                    cp ${ansible_inventory_path} .
+
+                    ansible-playbook playbooks/octoprint/email-notifications/configuration.yml -i ansible-betoland.inventory -l ${hostLimit} -v
+                '''
+            }
+        }
+    }
+}
+
+
