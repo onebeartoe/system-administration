@@ -5,4 +5,4 @@
     dest: /opt/onebeartoe/octoprint/
     mode: a+rwx
 
-- shell: JAVA_HOME=/usr groovy /opt/onebeartoe/octoprint/RevertConfiguration.groovy
+- shell: cd /opt/onebeartoe/octoprint/; JAVA_HOME=/usr groovy RevertConfiguration.groovy
