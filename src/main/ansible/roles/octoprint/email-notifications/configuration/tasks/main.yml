@@ -1,4 +1,4 @@
 
 - shell: ls -latrh .octoprint
 
-- shell: 1
+- shell: JAVA_HOME=/usr groovy -version 
