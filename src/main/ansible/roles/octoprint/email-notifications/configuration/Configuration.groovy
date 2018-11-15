@@ -34,7 +34,7 @@ else
         // backup the configuration file in case a revert is needed
         def source = Paths.get(configFilePath);
         
-        def outstream = FileOutputStream(backupFile);
+        def outstream = new FileOutputStream(backupFile);
         
         Files.copy(source, outstream);        
     }
