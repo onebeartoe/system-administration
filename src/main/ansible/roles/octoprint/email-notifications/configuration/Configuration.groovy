@@ -5,10 +5,10 @@ import java.nio.file.Files;
 import java.nio.file.StandardOpenOption;
 import java.nio.file.Path;
     
-evaluate( new File("ConfigurationPaths.groovy") )
+evaluate( new File("ConfigurationPaths.groovyyyy") )
 
 // Does the Events configuration already exists?
-def configContents = Files.readAllBytes( Path.get(configFilePath))
+def configContents = Files.readAllBytes( Path.get(configFilePath) );
 
 def configExists = configContents.contains("events:") && configContents.contains("subscriptions:");
 
