@@ -1,7 +1,7 @@
 
 - shell: |
     pwd
-    tree
+    echo $HOSTNAME
 
 - shell: ls -latrh .octoprint
 
