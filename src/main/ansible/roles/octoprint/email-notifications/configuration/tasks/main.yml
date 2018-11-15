@@ -1,7 +1,7 @@
 
-- shell: |
-    pwd
-    echo $HOSTNAME
+#- shell: |
+#    pwd
+#    echo $HOSTNAME
 
 #- shell: JAVA_HOME=/usr groovy -version 
 
@@ -10,8 +10,8 @@
 - name: Copy the Groovy script.
   copy:
     src: Configuration.groovy
-    dest: /opt/onebeartoe/octoprint
-    mode: u+rwx
+    dest: /opt/onebeartoe/octoprint/
+    mode: a+rwx
 
 - shell: JAVA_HOME=/usr groovy /opt/onebeartoe/octoprint/Configuration.groovy
 
