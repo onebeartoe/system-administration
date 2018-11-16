@@ -16,8 +16,8 @@ events:
     - /usr/bin/java -jar /opt/onebeartoe/email-sendette.jar 
       --to onebeartoe@gmail.com
       --subject "CR-10s - PrintStarted - {name}"
+      --messageText "The print has started; {name} - origin: {origin}."
       --smtpPropertiesPath path/to/config.properties >> /home/pi/workspace/octoprint-command.logs 2>&1
     debug: true
     event: PrintStarted
     type: system
-
