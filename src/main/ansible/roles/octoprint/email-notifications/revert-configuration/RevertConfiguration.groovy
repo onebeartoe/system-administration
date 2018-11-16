@@ -8,9 +8,9 @@ println "pwd: " + pwd.getAbsolutePath();
 
 evaluate( new File("ConfigurationPaths.groovy") )
 
-def configFilePath = "~/.octoprint/config.yml";
+def configFilePath = "~/.octoprint/config.yaml";
 
-def backupFilePath = "~/.octoprint/config.yml.backup"
+def backupFilePath = "~/.octoprint/config.yaml.backup"
 
 def backupFile = new File(backupFilePath)
 
