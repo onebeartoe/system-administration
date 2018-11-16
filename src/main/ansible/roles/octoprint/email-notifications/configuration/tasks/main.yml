@@ -5,7 +5,7 @@
     dest: /opt/onebeartoe/octoprint/
     mode: a+rwx
     
-- name: Copy the Groovy PATHS script.
+- name: Copy the Octoprint Events configuration.
   copy:
     src: config.xml.events
     dest: /opt/onebeartoe/octoprint/

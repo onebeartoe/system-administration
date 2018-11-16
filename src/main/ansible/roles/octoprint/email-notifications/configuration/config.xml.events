@@ -12,11 +12,11 @@ events:
     event: PrintDone
     type: system
   - command:
-    - logger 'PrintStarted - {name}'
-    - ls -la /usr/bin/java
-    - /usr/bin/java -jar /opt/onebeartoe/email-sendette.jar --to onebeartoe@gmail.com
-      --subject "Duplicator - PrintStarted - {name}" --smtpUser duplicator-pi --forceSmtpPassword
-      {smtpPassword} >> /home/pi/workspace/octoprint-command.logs 2>&1
+    - logger 'PrintStarted - {name} - dot'
+    - /usr/bin/java -jar /opt/onebeartoe/email-sendette.jar 
+      --to onebeartoe@gmail.com
+      --subject "CR-10s - PrintStarted - {name}"
+      --smtpPropertiesPath path/to/config.properties >> /home/pi/workspace/octoprint-command.logs 2>&1
     debug: true
     event: PrintStarted
     type: system

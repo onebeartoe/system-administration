@@ -8,5 +8,6 @@
 
 - name: Download the application WAR file.
   get_url: 
-    url: https://onebeartoe.ci.cloudbees.com/job/productivity/lastSuccessfulBuild/artifact/email/target/email-sendette.jar
+#    url: https://onebeartoe.ci.cloudbees.com/job/productivity/lastSuccessfulBuild/artifact/email/target/email-sendette.jar
+    url: https://onebeartoe.ci.cloudbees.com/job/software-development-tools/ws/email/target/email-sendette.jar
     dest: "{{ optDirectory }}"
