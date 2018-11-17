@@ -5,8 +5,8 @@ events:
     - logger 'PrintDone - {name}'
     - curl -o /tmp/printDone.jpg "http://localhost:8080/?action=snapshot"
     - /usr/bin/java -jar /opt/onebeartoe/email-sendette.jar --to onebeartoe@gmail.com
-      --subject "Duplicator - PrintDone - {name}" --attachment /tmp/printDone.jpg
-      --smtpUser duplicator-pi --forceSmtpPassword {smtpPassword} >> /home/pi/workspace/octoprint-command.logs
+      --subject "CR-10s - PrintDone - {name}" --attachment /tmp/printDone.jpg
+      --messageText "The print has started; {name}" --smtpPropertiesPath /opt/onebeartoe/octoprint/smtp.properties >> /home/pi/workspace/octoprint-command.logs
       2>&1
     debug: true
     event: PrintDone
