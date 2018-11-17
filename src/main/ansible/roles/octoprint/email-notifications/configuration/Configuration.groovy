@@ -6,16 +6,22 @@ import java.nio.file.StandardOpenOption;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-evaluate( new File("ConfigurationPaths.groovy") )
+//evaluate( new File("ConfigurationPaths.groovy") )
 
+//def configFilePath = "config.yaml";
 def configFilePath = "/home/pi/.octoprint/config.yaml";
 
+//def backupFilePath = "config.yaml.backup"
 def backupFilePath = "/home/pi/.octoprint/config.yaml.backup"
 
-// Does the Events configuration already exists?
-def configContents = Files.readAllBytes( Paths.get(configFilePath) );
+// Does the Events configuration already exist?
+def bytesArray = Files.readAllBytes( Paths.get(configFilePath) );
+
+String configContents = new String(bytesArray, "ISO-8859-1");
 
 def configExists = configContents.contains("events:") && configContents.contains("subscriptions:");
+
+println "config exists: " + configExists
 
 if(configExists)
 {
