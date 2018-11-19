@@ -6,11 +6,9 @@ import java.nio.file.Files;
 def pwd = new File(".")
 println "pwd: " + pwd.getAbsolutePath();
 
-evaluate( new File("ConfigurationPaths.groovy") )
+def configFilePath = "/home/pi/.octoprint/config.yaml";
 
-def configFilePath = "~/.octoprint/config.yaml";
-
-def backupFilePath = "~/.octoprint/config.yaml.backup"
+def backupFilePath = "/home/pi/.octoprint/config.yaml.backup"
 
 def backupFile = new File(backupFilePath)
 
@@ -26,7 +24,7 @@ if( backupFile.exists() )
 
         def outstream = new FileOutputStream(configFilePath);
 
-        Files.copy(soure, outstream);        
+        Files.copy(source, outstream);        
     }
     else
     {

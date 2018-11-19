@@ -13,6 +13,7 @@
     
 - name: Copy a sample SMTP configuration file.
   copy:
+    force: no
     src: smtp.properties
     dest: /opt/onebeartoe/octoprint/
     mode: a+rwx
