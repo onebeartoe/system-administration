@@ -4,7 +4,7 @@
     src: Configuration.groovy
     dest: /opt/onebeartoe/octoprint/
     mode: a+rwx
-    
+
 - name: Copy the Octoprint Events configuration.
   copy:
     src: config.xml.events
