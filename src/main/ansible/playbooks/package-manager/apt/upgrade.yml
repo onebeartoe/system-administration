@@ -3,4 +3,4 @@
   serial: 1
   become: true
   roles:
-    - ../../../roles/upgrade-package-manager
+    - ../../../roles/package-manager/apt/upgrade

@@ -4,4 +4,4 @@
   serial: 1
   become: true
   roles:
-    - ../../../roles/dolphin-with-preview-pane
+    - ../../../roles/package-manager/apt/dolphin-with-preview-pane
