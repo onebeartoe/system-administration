@@ -4,4 +4,4 @@
   serial: 1
   become: true
   roles:
-    - ../roles/dolphin-with-preview-pane
+    - ../../../roles/dolphin-with-preview-pane
