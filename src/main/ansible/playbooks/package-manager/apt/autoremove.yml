@@ -7,4 +7,4 @@
   serial: 1
   become: true
   roles:
-    - ../roles/package-manager/apt/autoremove
+    - ../../../roles/package-manager/apt/autoremove
