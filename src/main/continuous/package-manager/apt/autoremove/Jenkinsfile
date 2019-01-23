@@ -30,7 +30,7 @@ pipeline
 
                     # This script/Ansible expects to work with Python 2.7.12
                     # -i is the path inventory file; -l is the limit for the groups in the inventory file
-                    ansible-playbook playbooks/autoremove-package-manager.yml -i ansible-betoland.inventory -l all
+                    ansible-playbook playbooks/package-manager/apt/autoremove.yml -i ansible-betoland.inventory -l all
                 '''
             }
         }
