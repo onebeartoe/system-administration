@@ -1,8 +1,4 @@
 
-- name: Ensure the kio-extras dependency is available.
-  apt:
-      name: kio-extras
-
 - name: Ensure the ffmpegthumbs dependency is available.
   apt:
       name: ffmpegthumbs
@@ -14,6 +10,10 @@
 - name: Ensure the kffmpegthumbnailer dependency is available.
   apt:
       name: kffmpegthumbnailer
+
+- name: Ensure the kio-extras dependency is available.
+  apt:
+      name: kio-extras
 
 - name: Ensure the dolphin dependency is available.
   apt:
