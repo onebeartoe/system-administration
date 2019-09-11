@@ -1,0 +1,29 @@
+
+pipeline 
+{
+    agent
+    {
+        label 'master'
+    }
+
+    stages 
+    {
+        stage('Octoprint - Latest .gcode Files')
+        {
+            steps
+            {                
+                echo 'Octoprint Latest Gcode Files...'
+
+                sh '''
+                    pwd
+
+                    cd src/main/ansible/
+
+                    cp ${ansible_inventory_path} .
+
+                    ansible-playbook playbooks/octoprint/latest-gcodes/latest-gcodes.yml -i ansible-betoland.inventory -l ${hostLimit} -v
+                '''
+            }
+        }
+    }
+}
