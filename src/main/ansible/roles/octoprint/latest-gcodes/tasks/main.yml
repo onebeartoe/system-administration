@@ -1,5 +1,2 @@
 
-
-- name: List the lastest .gcode files.
-
 - shell: cd ~/.octoprint/uploads/; find . -type f -printf "%T@ %Tc %p\n" | sort -n
