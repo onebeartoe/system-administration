@@ -1,2 +1,5 @@
 
-- shell: cd ~/.octoprint/uploads/; find . -type f -printf "%T@ %Tc %p\n" | sort -n
+- shell: 
+    cd ~/.octoprint/uploads/
+    pwd
+    find . -type f -printf "%T@ %Tc %p\n" | sort -n
