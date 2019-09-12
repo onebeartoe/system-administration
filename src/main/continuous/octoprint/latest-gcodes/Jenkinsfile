@@ -21,7 +21,7 @@ pipeline
 
                     cp ${ansible_inventory_path} .
 
-                    ansible-playbook playbooks/octoprint/latest-gcodes/latest-gcodes.yml -i ansible-betoland.inventory -l ${hostLimit} -v
+                    ansible-playbook playbooks/octoprint/latest-gcodes/latest-gcodes.yml -i ansible-betoland.inventory -l ${hostLimit}
                 '''
             }
         }
