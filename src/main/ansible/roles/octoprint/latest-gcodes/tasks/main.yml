@@ -8,4 +8,4 @@
 #- shell: cd ~/.octoprint/uploads/; pwd; cat outfile.text
 
 - name: debug output
-  debug: msg={{ stdout_lines }}
+  debug: msg={{ stdout_lines.stdout.split('\n') }}
