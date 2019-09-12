@@ -21,6 +21,7 @@ pipeline
 
                     cp ${ansible_inventory_path} .
 
+# add -v to the end of the next line if the output does not show up
                     ansible-playbook playbooks/octoprint/latest-gcodes/latest-gcodes.yml -i ansible-betoland.inventory -l ${hostLimit}
                 '''
             }

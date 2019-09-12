@@ -2,10 +2,10 @@
 - shell: |
     cd ~/.octoprint/uploads/
     pwd
-    find . -type f -name "*.gcode" -printf "%T@ %Tc %p\n" | sort -n > outfile.text
+    find . -type f -name "*.gcode" -printf "%T@ %Tc %p\n" | sort -n 
   register: stdout
 
-- shell: cd ~/.octoprint/uploads/; pwd; cat outfile.text
+#- shell: cd ~/.octoprint/uploads/; pwd; cat outfile.text
 
 - name: debug output
   debug: msg={{ stdout }}
