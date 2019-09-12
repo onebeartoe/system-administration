@@ -2,7 +2,7 @@
 - shell: |
     cd ~/.octoprint/uploads/
     pwd
-    find . -type f -name "*.gcode" -printf "%T@ %Tc %p\n" | sort -n 
+    find . -type f -name "*.gcode" -printf "%Tc %p\n" | sort -n 
   register: stdout_lines
 
 #- shell: cd ~/.octoprint/uploads/; pwd; cat outfile.text
