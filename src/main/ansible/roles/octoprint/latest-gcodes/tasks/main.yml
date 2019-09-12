@@ -1,4 +1,7 @@
 
+# thanks for the awk help, 7winkie
+#       https://stackoverflow.com/a/7918051/803890
+
 - shell: |
     cd ~/.octoprint/uploads/
     pwd
