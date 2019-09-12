@@ -5,5 +5,3 @@
   become: true
   roles:
     - ../../../roles/octoprint/email-notifications/configuration
-
-
