@@ -15,6 +15,10 @@
   apt:
       name: kio-extras
 
+- name: Enable 'Extract Here' context menu item for compressed files.
+  apt:
+      name: ark
+
 - name: Ensure the dolphin dependency is available.
   apt:
       name: dolphin
