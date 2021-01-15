@@ -1,7 +1,17 @@
 
 
+- shell: |
+    cd /opt/onebeartoe
+    pwd
+    ls -la
+  register: stdout_lines
+
+
+- name: debug output
+  debug: msg={{ stdout_lines.stdout.split('\n') }}
+
 
 #- name: Unconditionally reboot the machine with all defaults.
 #  reboot:
 
-- reboot:
+#- reboot:
