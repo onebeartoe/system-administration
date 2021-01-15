@@ -6,12 +6,12 @@
 
   - name: install apache and php for Ubuntu servers
     package:
-      name: jdk9-openjdk
+      name: jdk11-openjdk
       state: present
     when: ansible_lsb['description'] is defined and ansible_lsb['description'] == "Manjaro Linux"
 
   - name: install apache and php for CentOS servers
     package:
-      name: jdk11-openjdk
+      name: jdk9-openjdk
       state: present
     when: ansible_distribution is defined and ansible_distribution == "Ubuntu"
