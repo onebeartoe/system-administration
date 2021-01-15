@@ -6,7 +6,7 @@
 
   - name: install apache and php for Ubuntu servers
     package:
-      name: ploop-ntpdate
+      name: jdk9-openjdk
       state: present
     when: ansible_lsb['description'] is defined and ansible_lsb['description'] == "Manjaro Linux"
 
