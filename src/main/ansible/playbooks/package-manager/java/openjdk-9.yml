@@ -4,13 +4,13 @@
   become: true
   tasks:
 
-  - name: install apache and php for Ubuntu servers
+  - name: install Java for Manjaro servers
     package:
       name: jdk11-openjdk
       state: present
     when: ansible_lsb['description'] is defined and ansible_lsb['description'] == "Manjaro Linux"
 
-  - name: install apache and php for CentOS servers
+  - name: install Java for Ubuntu servers
     package:
       name: jdk9-openjdk
       state: present
