@@ -6,12 +6,12 @@
 
   - name: install Java for Manjaro servers
     package:
-      name: jdk9-openjdk
+      name: jdk11-openjdk
       state: present
     when: ansible_lsb['description'] is defined and ansible_lsb['description'] == "Manjaro Linux"
 
   - name: install Java for Ubuntu servers
     package:
-      name: openjdk-9-jdk
+      name: openjdk-11-jdk
       state: present
     when: ansible_distribution is defined and ansible_distribution == "Ubuntu"
