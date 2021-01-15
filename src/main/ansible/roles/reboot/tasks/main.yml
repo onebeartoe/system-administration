@@ -12,7 +12,7 @@
   debug: msg={{ stdout_lines.stdout.split('\n') }}
 
 
+# It seem the built-in 'reboot' is in newer versions of Ansible than the one used
+# in this project.
 #- name: Unconditionally reboot the machine with all defaults.
 #  reboot:
-
-#- reboot:
