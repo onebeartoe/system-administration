@@ -8,10 +8,10 @@
     package:
       name: ploop-ntpdate
       state: present
-    when: ansible_lsb['description'] is defiined and ansible_lsb['description'] == "Manjaro Linux"
+    when: ansible_lsb['description'] is defined and ansible_lsb['description'] == "Manjaro Linux"
 
   - name: install apache and php for CentOS servers
     package:
       name: openjdk-9-jdk
       state: present
-    when: ansible_distribution is defiined and ansible_distribution == "Ubuntu"
+    when: ansible_distribution is defined and ansible_distribution == "Ubuntu"
