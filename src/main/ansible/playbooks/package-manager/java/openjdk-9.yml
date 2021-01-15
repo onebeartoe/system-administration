@@ -3,6 +3,9 @@
   gather_facts: yes
   serial: 1
   become: true
+  tasks:
+  - name: Real Distribution
+    debug: msg="{{ ansible_distribution }}"  
   roles:
     - ../../../roles/package-manager/java/openjdk-9
 
