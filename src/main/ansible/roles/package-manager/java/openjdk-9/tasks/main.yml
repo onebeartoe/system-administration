@@ -1,8 +1,0 @@
-
-- name: Sure Distribution
-  debug: msg="Sure ansible_distribution"
-
-- name: Install OpenJDK 9
-  package:
-    name: openjdk-9-jdk
-    state: present
