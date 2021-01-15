@@ -1,4 +1,7 @@
 
+- name: Distribution
+  debug: msg="{{ ansible_distribution }}"
+
 - name: Install OpenJDK 9
   package:
     name: openjdk-9-jdk
