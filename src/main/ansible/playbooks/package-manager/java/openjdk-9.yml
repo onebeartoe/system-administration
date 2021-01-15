@@ -1,18 +1,17 @@
+---
 
 - hosts: all
-  gather_facts: yes
-  serial: 1
   become: true
   tasks:
-  - name: Real Distribution
-    debug: msg="the distro is -> {{ ansible_distribution }}"  
-  vars: 
-    msg: |
-        Ansible Distribution: {{ ansible_distribution }}
-        Ansible Dist version: {{ ansible_distribution_version }}
-  debug:
-  - name: ss
-    debug: msg: "the real distro -> {{ msg.split('\n') }}"  
-#  roles:
-#    - ../../../roles/package-manager/java/openjdk-9
 
+  - name: install apache and php for Ubuntu servers
+    package:
+      name: ploop-ntpdate
+      state: present
+    when: ansible_lsb['description'] is defiined and ansible_lsb['description'] == "Manjaro Linux"
+
+  - name: install apache and php for CentOS servers
+    package:
+      name: openjdk-9-jdk
+      state: present
+    when: ansible_distribution is defiined and ansible_distribution == "Ubuntu"
