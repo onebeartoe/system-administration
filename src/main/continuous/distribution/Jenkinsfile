@@ -1,0 +1,37 @@
+
+pipeline 
+{
+    agent
+    {
+        label 'master'
+    }
+
+    stages 
+    {
+        stage('Show Disfrituino Information')
+        {
+            steps
+            {
+                
+                echo 'Show distribution...'
+
+                sh '''
+                    ansible-playbook --version
+
+                    pwd
+
+                    ls -ltrh
+
+                    cd src/main/ansible/
+
+                    cp ${ansible_inventory_path} .
+
+                    ls -ltrh
+
+                    ansible-playbook playbooks/distribution.yml -i ansible-betoland.inventory -l -l ${hostLimit}
+                '''
+            }
+        }
+    }
+}
+
