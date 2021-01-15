@@ -1,0 +1,8 @@
+
+- hosts: all
+#  remote_user: luke
+  serial: 1
+  become: true
+  roles:
+    - ../roles/package-manager/java/openjdk-9
+
