@@ -4,6 +4,7 @@
     cd /opt/onebeartoe
     pwd
     ls -la
+    reboot
   register: stdout_lines
 
 
