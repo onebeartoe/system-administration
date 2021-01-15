@@ -6,6 +6,12 @@
   tasks:
   - name: Real Distribution
     debug: msg="the distro is -> {{ ansible_distribution }}"  
+  vars: 
+    msg: |
+        Ansible Distribution: {{ ansible_distribution }}
+        Ansible Dist version: {{ ansible_distribution_version }}
+  debug: 
+    msg: "the real distro -> {{ msg.split('\n') }}"  
   roles:
     - ../../../roles/package-manager/java/openjdk-9
 
