@@ -28,7 +28,7 @@ pipeline
 
                     ls -ltrh
 
-                    ansible-playbook playbooks/distribution.yml -i ansible-betoland.inventory -l -l ${hostLimit}
+                    ansible-playbook playbooks/distribution.yml -i ansible-betoland.inventory -l ${hostLimit}
                 '''
             }
         }
