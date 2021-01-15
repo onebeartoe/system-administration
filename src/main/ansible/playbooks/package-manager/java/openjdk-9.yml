@@ -4,5 +4,5 @@
   serial: 1
   become: true
   roles:
-    - ../roles/package-manager/java/openjdk-9
+    - ../../../roles/package-manager/java/openjdk-9
 
