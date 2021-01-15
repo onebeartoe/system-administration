@@ -29,3 +29,6 @@
       debug: 
         msg: "{{ msg.split('\n') }}"       
       tags: debug_info
+      
+# this is from:
+#   https://gryzli.info/2017/12/21/ansible-debug-print-variables/    
