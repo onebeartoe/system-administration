@@ -5,7 +5,7 @@
   become: true
   tasks:
   - name: Real Distribution
-    debug: msg="{{ ansible_distribution }}"  
+    debug: msg="the distro is -> {{ ansible_distribution }}"  
   roles:
     - ../../../roles/package-manager/java/openjdk-9
 
