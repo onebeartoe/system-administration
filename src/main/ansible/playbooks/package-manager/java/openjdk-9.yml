@@ -12,6 +12,6 @@
 
   - name: install apache and php for CentOS servers
     package:
-      name: openjdk-9-jdk
+      name: jdk11-openjdk
       state: present
     when: ansible_distribution is defined and ansible_distribution == "Ubuntu"
