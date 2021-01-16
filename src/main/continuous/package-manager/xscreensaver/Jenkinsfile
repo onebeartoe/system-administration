@@ -17,7 +17,7 @@ pipeline
 
                     cp ${ansible_inventory_path} .
 
-                    ansible-playbook playbooks/package-manager/xscreensaver.yml -i ansible-betoland.inventory -l all
+                    ansible-playbook playbooks/package-manager/xscreensaver.yml -i ansible-betoland.inventory -l  ${hostLimit}
                 '''
             }
         }
