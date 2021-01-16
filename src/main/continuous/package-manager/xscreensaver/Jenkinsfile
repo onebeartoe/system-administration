@@ -1,0 +1,25 @@
+
+pipeline 
+{
+    agent
+    {
+        label 'master'
+    }
+
+    stages 
+    {
+        stage('Install xscreensaver')
+        {
+            steps
+            {
+                sh '''
+                    cd src/main/ansible/
+
+                    cp ${ansible_inventory_path} .
+
+                    ansible-playbook playbooks/package-manager/xscreensaver.yml -i ansible-betoland.inventory -l all
+                '''
+            }
+        }
+    }
+}

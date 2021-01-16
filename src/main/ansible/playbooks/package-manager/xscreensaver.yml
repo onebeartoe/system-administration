@@ -1,0 +1,17 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: install xscreensaver
+    package:
+      name: xscreensaver
+      state: present
+    when: ansible_lsb['description'] is defined and ansible_lsb['description'] == "Manjaro Linux"
+
+  - name: install Java for Ubuntu servers
+    package:
+      name: xscreensaver
+      state: present
+    when: ansible_distribution is defined and ansible_distribution == "Ubuntu"
