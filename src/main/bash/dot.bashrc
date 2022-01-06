@@ -34,8 +34,8 @@ alias ll='ls -alhF'
 export JAVA8_HOME=/opt/jdk/oracle-jdk1.8.0_261
 export JAVA11_HOME=/opt/jdk/oracle-jdk-11
 export JAVA12_HOME=/opt/jdk/oracle-jdk-12
-export JAVA12_HOME=/opt/jdk/adoptium/jdk-16.0.2+7
-export JAVA_HOME=$JAVA12_HOME
+export JAVA16_HOME=/opt/jdk/adoptium/jdk-16.0.2+7
+export JAVA_HOME=$JAVA16_HOME
 alias java8='export JAVA_HOME=$JAVA8_HOME; PATH=$JAVA_HOME/bin:$PATH'
 alias java11='export JAVA_HOME=$JAVA11_HOME; PATH=$JAVA_HOME/bin:$PATH'
 alias java12='export JAVA_HOME=$JAVA12_HOME; PATH=$JAVA_HOME/bin:$PATH'
