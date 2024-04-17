@@ -3,7 +3,6 @@ package org.onebeartoe;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.List;
@@ -47,11 +46,6 @@ public class GithubMarkdownLineTrimer
     private void output(File outfile, List<String> trimmedLines) throws IOException
     {
         var outpath = outfile.toPath();
-     
-        var delimiter = System.lineSeparator();
-        
-        String output = trimmedLines.stream()
-                                    .collect( Collectors.joining(delimiter));
         
         Files.write(outpath, trimmedLines, StandardCharsets.UTF_8);
     }
